@@ -1,3 +1,3 @@
 "use strict";
-var language = "Typescript";
+let language = "Typescript";
 console.log(language);

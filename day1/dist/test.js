@@ -1,2 +1,2 @@
 "use strict";
-var es = 'ES5';
+const es = 'ES5';
