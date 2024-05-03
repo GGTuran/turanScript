@@ -53,6 +53,23 @@
 
 
 
+    //in Javascript -->object, array--> object , function--> object
+
+    //using interface for array
+    interface Roll1{
+        [ index: number] : number
+    }
+    const roll : Roll1 = [6,7,8]
+
+
+
+    //we can use interface for functions too
+    interface ADD {
+        (num1:number, num2:number) : number
+    }
+     const add1:ADD = (num1, num2)=>{
+        return num1 + num2
+     }
 
 
 
