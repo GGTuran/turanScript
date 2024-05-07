@@ -55,8 +55,10 @@
     const jeep = new Benz();
 
 
+console.log('')
 
 
 
 
+// console.log(first)
 }

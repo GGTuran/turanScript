@@ -99,10 +99,13 @@
 //need to practice the instance of again
 //
 
+// const add = (sum:number, sum2:number):number =>{
+//     return sum1 + sum2;
+// }
 
 
 
-
+console.log('string')
 
 
 

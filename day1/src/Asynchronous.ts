@@ -34,6 +34,27 @@
     callPromise();
 
 
+    //from conceptual
+
+    interface GG {
+        id:number;
+        title:string;
+        body:string;
+    }
+
+    const fetchData = async () : Promise<GG[]> =>{
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = res.json();
+        return data;
+    }
+
+    const show = async() =>{
+        const result = await fetchData();
+        console.log(result);
+    }
+    show();
+
+
 
 
 
