@@ -3,7 +3,7 @@
     //Union Types
     //either this or this
 
-    type Complete = true | false
+    type Complete = string | boolean;
     const course:Complete = false
 
     // another example
