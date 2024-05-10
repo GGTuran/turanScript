@@ -29,31 +29,31 @@
 
 
 
-  const numbers = [15.5, 2.3, 1.1, 4.7];
+  // const numbers = [15.5, 2.3, 1.1, 4.7];
 
-  const sum = numbers.reduce(getSum, 0);
+  // const sum = numbers.reduce(getSum, 0);
 
-  function getSum(total:number, num:number) {
-  return total + Math.round(num);
-  }
+  // function getSum(total:number, num:number) {
+  // return total + Math.round(num);
+  // }
 
-  type Circle={
-    radius:number;
-  };
-  type Rectangle={
-    height:number;
-    width:number;
-  };
+  // type Circle={
+  //   radius:number;
+  // };
+  // type Rectangle={
+  //   height:number;
+  //   width:number;
+  // };
 
-  function printArea(shape: Circle | Rectangle) {
-    if (shape instanceof Circle) {
-        const area = shape.radius * shape.radius * Math.PI;
-        console.log(`Area of the circle is ${area}`);
-    } else {
-        const area = shape.width * shape.height;
-        console.log(`Area of the rectangle is ${area}`);
-    }
-}
+//   function printArea(shape: Circle | Rectangle) {
+//     if (shape instanceof Circle) {
+//         const area = shape.radius * shape.radius * Math.PI;
+//         console.log(`Area of the circle is ${area}`);
+//     } else {
+//         const area = shape.width * shape.height;
+//         console.log(`Area of the rectangle is ${area}`);
+//     }
+// }
 
 
 
@@ -134,6 +134,71 @@
   // console.log(result3);
 
 
+
+   //First we need to make the type alias and function
+    //And then we will use date().getFullYear() method to extract the year
+
+    type Book ={
+      title:string;
+      author:string;
+      publishedYear:number;
+  }
+
+  function  isRecentBook ( book :Book):boolean {
+      let givenYear = new Date().getFullYear();
+      return givenYear - book.publishedYear <= 5;
+      }
+
+
+      const book1:Book = {
+          title:'Ele-bele',
+          author:'Humayun Ahmed',
+          publishedYear: 1989,
+      }
+
+       const result = isRecentBook(book1);
+      //  console.log(result);
+
+
+          //There are some methods of type checking
+    //i will use typeOf method with if else block
+    function logString(value:unknown):void{
+      if(typeof value === "string"){
+          console.log(`${value}`)
+      }else{
+          throw new Error("Please provide a string!! we don't accept anything else ");
+      }
+  }
+  logString('gg');
+  // logString(76);
+
+      //first we need to declare a class and then we will include the properties and method into the class
+    //After that we will make an instance and simply call the method
+
+    class Car {
+      brand:string;
+      model:string;
+      year:number;
+
+      constructor(
+            brand:string,
+            model:string,
+            year:number){
+          this.brand = brand;
+          this.model = model;
+          this.year = year
+      }
+      displayInfo(){
+          const result = `Your car model is ${this.brand} ${this.model} ${this.year}`;
+          return result;
+          // console.log(result);
+      }
+  }
+
+  //creating an instance
+  const car = new Car('BMW', 'E30 M3', 1986);
+  const result = car.displayInfo();
+  // console.log(result);
 
 
 
